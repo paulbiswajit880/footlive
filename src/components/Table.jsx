@@ -6,7 +6,7 @@ export default function Table(props) {
   useEffect(() => {
     const fetchApi = async () => {
       setLoading(true)
-      const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${props.leaugeid}&APIkey=eee3c0420771e93151ed86b446a2b43454f22f8c0b90cfa91b13349fb32ad81b`
+      const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${props.leaugeid}&APIkey=5a8598ffbb6fc6bb4eabad16e62db094b32004469a826432fb183ea0a168e30c`
       const response = await fetch(url)
       const resJson = await response.json()
       setTable(resJson.result.total)

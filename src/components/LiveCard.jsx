@@ -10,7 +10,7 @@ export default function LiveCard() {
   useEffect(() => {
     const fetchApi = async () => {
       setLoading(true)
-      const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=eee3c0420771e93151ed86b446a2b43454f22f8c0b90cfa91b13349fb32ad81b`
+      const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=5a8598ffbb6fc6bb4eabad16e62db094b32004469a826432fb183ea0a168e30c`
       const response = await fetch(url)
       const resJson = await response.json()
       setData(resJson.result)
@@ -30,7 +30,8 @@ export default function LiveCard() {
         <div className="col-md-4 " style={{
           display: "flex",
           width: "100%",
-          justifycontent: "center"
+          justifyContent: "center",
+          gap:"20px"
         }} >
 
 

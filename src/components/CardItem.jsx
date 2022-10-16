@@ -5,7 +5,7 @@ export default function CardItem(props) {
 
     return (
         <>
-            <div className="card my-2 mx-2" style={{ width: "22rem" }}>
+            <div className="card my-2 mx-2" style={{ width: "22rem"}}>
 
                 <div className="card-body text-center">
                     <b className="card-title text-center my-0">{props.tournament}</b>
@@ -30,7 +30,12 @@ export default function CardItem(props) {
                             <div className='container'><img src={props.awayimgurl} width="40px" alt="..." /></div>
 
                         </div>
+                        
                     </div>
+                    {/* <hr />
+                        <div className="goalscorer"><span className="material-symbols-outlined ">
+                        sports_soccer
+        </span></div> */}
 
 
                 </div>

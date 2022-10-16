@@ -5,8 +5,8 @@ import {  BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from './components/Navbar';
 import propTypes from 'prop-types';
 import Table from './components/Table';
-import Leauge from './components/Leauge';
-import CupTable from './components/CupTable';
+// import Leauge from './components/Leauge';
+// import CupTable from './components/CupTable';
 // import CupTable from './components/CupTable';
 
 
@@ -18,9 +18,9 @@ function App() {
     <Router>
     <Navbar  />
     
-      <CupTable/>
+      {/* <CupTable/> */}
       <Routes>
-      <Route exact path='/m' element=<LiveCard />/>
+      <Route exact path='/' element=<LiveCard />/>
         <Route exact path='/premierleauge' element=<Table leaugeid={152} lname="Premier Leauge" img="/images/152_premier-league.png"/>/>
         <Route exact path='/laliga' element=<Table leaugeid={302} lname={"Laliga"} img="/images/302_la-liga.png"/>/>
         <Route exact path='/serie_a' element=<Table leaugeid={207} lname={"Serie-A"} img="/images/Lega-Serie-A.jpg"/>/>

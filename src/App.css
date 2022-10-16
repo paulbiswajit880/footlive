@@ -32,10 +32,10 @@
     100%{transform: translate(0px);}
 }
 
-.tl:nth-child(4n+1){
+/* .tl:nth-child(4n+1){
 
     border-top: 2px solid black;
-    }
+    } */
 
 /* .tl:nth-child(5){
 
