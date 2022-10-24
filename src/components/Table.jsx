@@ -33,7 +33,7 @@ export default function Table(props) {
           <th scope="col">Pts.</th>
         </tr>
       </thead>
-      <tbody >
+      <tbody style={{fontSize:"13px"}}>
 
         {!loading && table.map((el, id) => {
           return (

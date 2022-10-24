@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CardItem from './CardItem'
 import Spinner from './Spinner'
+import ScrollToTop from "react-scroll-to-top";
 
 export default function LiveCard() {
   const [data, setData] = useState([])
@@ -46,6 +47,11 @@ export default function LiveCard() {
 
         </div>
       </div>
+    </div>
+    <div>
+      
+      <div style={{ marginTop: "0vh"}} />
+      <ScrollToTop smooth style={{right:"11px",bottom:"11px",borderRadius:"50%"}} />
     </div>
   </>
   )
