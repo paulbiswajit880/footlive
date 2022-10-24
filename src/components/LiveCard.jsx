@@ -13,7 +13,7 @@ export default function LiveCard() {
       const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=5a8598ffbb6fc6bb4eabad16e62db094b32004469a826432fb183ea0a168e30c`
       const response = await fetch(url)
       const resJson = await response.json()
-      setData(resJson.result)
+      setData(resJson.result.slice(0,40))
 
       setLoading(false)
     }

@@ -4,7 +4,7 @@
 
 @media (max-width: 900px){
     #tbody{
-        font-size: 13px;
+        font-size: 11px;
     }
 }
 .dark{
@@ -32,10 +32,10 @@
     100%{transform: translate(0px);}
 }
 
-/* .tl:nth-child(4n+1){
+.tl:nth-child(4n+1){
 
-    border-top: 2px solid black;
-    } */
+    border-top: 20px solid rgb(67, 64, 64);
+    }
 
 /* .tl:nth-child(5){
 

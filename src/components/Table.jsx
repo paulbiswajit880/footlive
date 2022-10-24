@@ -37,7 +37,7 @@ export default function Table(props) {
 
         {!loading && table.map((el, id) => {
           return (
-            <tr className='tl' key={id}>
+            <tr  key={id}>
               <th scope="row">{el.standing_place}</th>
               <td>{el.standing_team}</td>
               <td>{el.standing_P}</td>

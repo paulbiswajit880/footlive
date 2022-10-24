@@ -5,11 +5,11 @@ export default function SidebarItem() {
   return (
     <div className="offcanvas-body">
     <div className="home" data-bs-dismiss="offcanvas">
-        <b className=""><Link to="/">Home</Link></b>
+        <b className=""><Link to="/">Live Scores</Link></b>
     </div>
     <div className='my-4'>
       <b className="" data-bs-toggle="collapse" href="#collapseleague" role="button" aria-expanded="false" aria-controls="collapseleague">
-         Point Table of Top Leagues <span>&#9660;</span>
+          Top Leagues Tables <span>&#9660;</span>
       </b>
       <div className="collapse my-2" id="collapseleague">
         <ul className="list-group ">
@@ -21,12 +21,19 @@ export default function SidebarItem() {
           <li className="list-group-item" data-bs-dismiss="offcanvas"> <Link to="/primeiraliga">Primeira Liga <img className='logo' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJ2Qz0VpUpz7xR9GNjpZjh25KVsPtQ0c7GlQ&usqp=CAU" alt="" /></Link> <span></span></li>
           <li className="list-group-item" data-bs-dismiss="offcanvas"> <Link to="/eredivise">Eredivisie <img className='logo' src="https://apiv2.allsportsapi.com/logo/logo_leagues/244_eredivisie.png" alt="" /></Link> <span></span></li>
           <li className="list-group-item" data-bs-dismiss="offcanvas"> <Link to="/isl">Indian Super League <img className='logo' src="https://apiv2.allsportsapi.com/logo/logo_leagues/566_indian-super-league.png" alt="" /></Link> <span></span></li>
+          
         </ul>
       </div>
     </div>
     <div className='my-2' data-bs-dismiss="offcanvas">
-      <b className="">FIFA World Cup <span><img className='logo' src="https://static.vecteezy.com/system/resources/previews/008/785/666/original/mondial-fifa-world-cup-qatar-2022-official-logo-champion-symbol-design-abstract-illustration-free-vector.jpg" alt="" /></span></b>
-    </div>
+      <Link to="/worldcup"><b className="">FIFA World Cup <span><img className='logo' src="https://static.vecteezy.com/system/resources/previews/008/785/666/original/mondial-fifa-world-cup-qatar-2022-official-logo-champion-symbol-design-abstract-illustration-free-vector.jpg" alt="" /></span></b></Link>
+      </div>
+    <div className='my-2' data-bs-dismiss="offcanvas">
+    <Link to="/ucl"><b className="">UEFA Champions League <span><img className='logo' src="https://assets.stickpng.com/images/5842fe06a6515b1e0ad75b3b.png" alt="" /></span></b></Link>
+      </div>
+    <div className='my-2' data-bs-dismiss="offcanvas">
+    <Link to="/uel"><b className="">UEFA Europa League <span><img className='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Europa_League_2021.svg/800px-Europa_League_2021.svg.png" alt="" /></span></b></Link>
+      </div>
   </div>
   )
 }

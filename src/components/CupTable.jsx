@@ -6,23 +6,25 @@ export default function CupTable(props) {
   useEffect(() => {
     const fetchApi = async () => {
       setLoading(true)
-      const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${28}&APIkey=5a8598ffbb6fc6bb4eabad16e62db094b32004469a826432fb183ea0a168e30c`
+      const url = `https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=https://apiv2.allsportsapi.com/football/?&met=Standings&leagueId=${props.leaugeid}&APIkey=5a8598ffbb6fc6bb4eabad16e62db094b32004469a826432fb183ea0a168e30c`
       const response = await fetch(url)
       const resJson = await response.json()
       setTable(resJson.result.total)
-      // console.log(resJson.result.total);
+      console.log(resJson.result.total);
       setLoading(false)
 
     }
     fetchApi()
     // setInterval(fetchApi, 30000)
   }, [props])
-  return (
+  return (<>
+    <div className="container text-center my-2" ><img className='tlogo' src={props.img} alt="" /></div>
     <div className="container" >
     <table className="table" >
     
       <thead className='border-info' >
         <tr >
+          <th scope="col">G</th>
           <th scope="col">#</th>
           <th scope="col">Team</th>
           <th scope="col">P</th>
@@ -38,6 +40,7 @@ export default function CupTable(props) {
       {!loading && table.map((el, id) => {
           return (
             <tr className='tl' key={id}>
+              <th scope="row">{el.league_round.slice(-1)}</th>
               <th scope="row">{el.standing_place}</th>
               <td>{el.standing_team}</td>
               <td>{el.standing_P}</td>
@@ -56,5 +59,6 @@ export default function CupTable(props) {
       </tbody>
     </table>
     </div>
+    </>
   )
   }
